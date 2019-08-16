@@ -1,1 +1,28 @@
 // Mixins Here
+.hidden(){
+    display: none;
+  }
+  
+  // Parametric Mixin
+.custom-btn(@bgcolor, @font-color, @br, @fs) {
+    color: @font-color;
+    background-color: @bgcolor;
+    border-radius: @br;
+    font-size: @fs;
+    width: 200px;
+    height: 50px;
+  
+    &:hover {
+      background-color: @font-color;
+      color: @bgcolor;
+    }
+  }
+  #signup{
+    .custom-btn(#191970, white, 10px, 2rem);
+    @media @phone {	
+        width: 100%;    
+    } 
+  
+  
+  }
+  
